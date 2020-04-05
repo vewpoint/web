@@ -261,7 +261,8 @@ a:active {
     }
 }
 
-@media (max-width: 900px) and (max-height: 480px) {
+@media (max-width: 900px),
+(max-height: 480px) {
     #presentation {
         display: none;
     }
