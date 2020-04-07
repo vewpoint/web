@@ -244,3 +244,23 @@ a:hover {
         width: 100%;
     }
 }
+
+.gray ::-moz-selection {
+    color: #efefef;
+    background-color: gray;
+}
+
+.gray ::selection {
+    color: #efefef;
+    background-color: gray;
+}
+
+.black ::-moz-selection {
+    color: black;
+    background-color: #ffdb00;
+}
+
+.black ::selection {
+    color: black;
+    background-color: #ffdb00;
+}

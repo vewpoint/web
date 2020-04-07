@@ -271,3 +271,13 @@ a:active {
         display: block;
     }
 }
+
+::-moz-selection {
+    color: #efefef;
+    background-color: gray;
+}
+
+::selection {
+    color: #efefef;
+    background-color: gray;
+}
