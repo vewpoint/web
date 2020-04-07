@@ -7,6 +7,7 @@ body {
     width: 100%;
     /* limit media query */
     min-width: 320px;
+    /* use 100vh instead of 100% to avoid problems when rotating mobile device */
     height: 100vh;
 }
 
