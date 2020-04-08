@@ -61,6 +61,12 @@ body {
     position: relative;
 }
 
+.outline {
+    margin: 5%;
+    color: gray;
+    width: 100%;
+}
+
 .text {
     margin: 15%;
     color: gray;
@@ -280,4 +286,24 @@ a:active {
 ::selection {
     color: #efefef;
     background-color: gray;
+}
+
+table,
+th,
+td {
+    border: 1px solid red;
+    border-collapse: collapse;
+    vertical-align: text-top;
+    text-align: left;
+    padding: 0.3rem;
+}
+
+th {
+    white-space: nowrap;
+    font-weight: normal;
+    text-align: right;
+}
+
+.rowspacer {
+    padding-bottom: 1.2rem;
 }
