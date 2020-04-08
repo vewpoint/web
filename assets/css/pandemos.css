@@ -27,6 +27,18 @@ body {
     scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(100%);
     scroll-snap-type: y mandatory;
+
+    /* https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+}
+
+#presentation::-webkit-scrollbar {
+    /* WebKit */
+    width: 0;
+    height: 0;
 }
 
 #nopresentation {
