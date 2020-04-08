@@ -288,22 +288,51 @@ a:active {
     background-color: gray;
 }
 
-table,
-th,
-td {
-    border: 1px solid red;
-    border-collapse: collapse;
-    vertical-align: text-top;
-    text-align: left;
-    padding: 0.3rem;
+.linkOutline {
+    color: gray;
 }
 
-th {
-    white-space: nowrap;
-    font-weight: normal;
-    text-align: right;
+.linkOutline:link,
+.linkOutline:visited,
+.linkOutline:active {
+    text-decoration: none;
 }
 
-.rowspacer {
-    padding-bottom: 1.2rem;
+.linkOutline:hover {
+    color: #ffdb00;
+}
+
+.header {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.menu {
+    text-align: center;
+    margin: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.linkMenu {
+    padding: 0.5rem 0.8rem;
+    color: #ffdb00;
+    background-color: black;
+}
+
+.linkMenu:link,
+.linkMenu:visited,
+.linkMenu:active {
+    text-decoration: none;
+}
+
+.linkMenu:hover {
+    color: black;
+    background-color: #ffdb00;
 }
