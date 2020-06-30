@@ -196,6 +196,10 @@ a:hover {
     height: 100%;
 }
 
+iframe.photo {
+    object-fit: initial;
+}
+
 #brokenphone {
     width: calc(100% - 40%);
 }
