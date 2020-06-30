@@ -1,0 +1,267 @@
+/* issue with ios?
+https://github.com/bvaughn/react-window/issues/290 */
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    /* limit media query */
+    min-width: 320px;
+    /* use 100vh instead of 100% to avoid problems when rotating mobile device */
+    height: 100vh;
+}
+
+body {
+    background-color: black;
+    font-family: 'Barlow', sans-serif;
+    line-height: 1.4rem;
+    color: gray;
+    /* https://www.smashingmagazine.com/2018/08/scroll-bouncing-websites/ */
+    overscroll-behavior: none;
+}
+
+/* https://stackoverflow.com/questions/53416348/css-scroll-snapping-vertical-not-working/53417516 */
+#presentation {
+    overflow-y: scroll;
+    height: 100vh;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100%);
+    scroll-snap-type: y mandatory;
+    /* https://www.grapecity.com/blogs/css-scroll-snap-points-javascript */
+    -webkit-overflow-scrolling: touch;
+}
+
+.slide {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    scroll-snap-align: start;
+    overflow: visible;
+}
+
+.grayBackground {
+    background-color: #efefef;
+    color: black;
+}
+
+.flex {
+    display: flex;
+}
+
+.half {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content: center; */
+    position: relative;
+}
+
+.text {
+    margin: auto 15%;
+    width: 100%;
+}
+
+.gray {
+    color: gray;
+}
+
+.yellow {
+    color: #ffdb00;
+}
+
+.black {
+    color: black;
+}
+
+.floatingtext {
+    position: absolute;
+    margin: auto;
+    color: gray;
+    display: flex;
+    width: 100%;
+
+    justify-content: center;
+}
+
+.title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.center {
+    text-align: center;
+}
+
+a {
+    color: blue;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    border-bottom: 0.1rem solid blue;
+}
+
+a:hover {
+    background-color: blue;
+    color: #efefef;
+}
+
+
+.gray a {
+    color: #efefef;
+}
+
+.gray a:link,
+.gray a:visited,
+.gray a:hover,
+.gray a:active {
+    text-decoration: none;
+    border-bottom: 0.1rem solid #efefef;
+    background-color: transparent;
+}
+
+.gray a:hover {
+    background-color: #efefef;
+    color: black;
+}
+
+.photo {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.instructions {
+    position: absolute;
+    top: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.footnote {
+    text-align: center;
+    margin: 1.5rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.linkLabel {
+    padding: 0.5rem 0.8rem;
+    color: gray;
+    background-color: black;
+}
+
+.linkLabel:link,
+.linkLabel:visited,
+.linkLabel:active {
+    text-decoration: none;
+    border: none;
+}
+
+.linkLabel:hover {
+    color: black;
+    background-color: #efefef;
+    border: none;
+}
+
+.linkLabel:hover span {
+    color: black;
+}
+
+.small {
+    font-size: 0.7rem;
+    line-height: 1rem;
+}
+
+.frame {
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    filter: grayscale(100%);
+}
+
+.highlight {
+    background-color: #ffdb00;
+    padding: 0.1rem 0.3rem 0.15rem;
+}
+
+/* media query breaking points via https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488 */
+
+@media (min-width: 1281px) {
+    html {
+        font-size: 1em;
+    }
+
+    .half {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    html {
+        font-size: 1em;
+    }
+
+    .half {
+        width: 60%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    html {
+        font-size: 1em;
+    }
+
+    .half {
+        width: 80%;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+    html {
+        font-size: 0.8em;
+    }
+
+    .half {
+        width: 100%;
+    }
+}
+
+.gray ::-moz-selection {
+    color: #efefef;
+    background-color: gray;
+}
+
+.gray ::selection {
+    color: #efefef;
+    background-color: gray;
+}
+
+.black ::-moz-selection {
+    color: black;
+    background-color: #ffdb00;
+}
+
+.black ::selection {
+    color: black;
+    background-color: #ffdb00;
+}

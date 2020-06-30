@@ -1,0 +1,72 @@
+const data = [
+    {
+        id: 200602,
+        tldr: "I want to inspire others the same way that others inspire me.",
+        tldrESP: "Quiero inspirar a los demás de la misma manera que los demás me inspiran a mí.",
+        videoTranscript: "2008.\n\nI set up an interaction design studio with some friends, and we started to create interactive installations in physical spaces.⁣\n\nWe were amazed by how people interacted with our installations, and we realized that our interest was on designing for what was happening in front of the screen, not inside of it.⁣\n\nWe were designing experiences. Spaces that invited people to explore by playing.⁣\n\nOur work was based on the idea that everybody is creative by nature and the results of our creativity, when shared, automatically become a source of inspiration for others.⁣\n\nThat period awakened and consolidated in me a profound fascination for human behavior.",
+        videoUrl: "https://youtu.be/S13tjz6TKek",
+        videoCode: "S13tjz6TKek",
+        videoTranscriptESP: "2008.\n\nMonto con unos amigos un estudio de diseño de interacción y empezamos a crear instalaciones interactivas en espacios físicos.\n\nQuedamos sorprendidos por como la gente interactua en nuestras instalaciones, y nos damos cuenta de que nuestro interés estaba en diseñar para lo que estaba pasando delante de la pantalla, no dentro de ella.\n\nEstábamos diseñando experiencias. Espacios que invitaban a la gente a explorar a través del juego.\n\nNuestro trabajo se basaba en la idea de que cualquier persona es creativa por naturaleza y que los resultados de nuestra creatividad, al ser compartidos, automáticamente se convierten en una fuente de inspiración para los demás.\n\nEse periodo despertó y consolidó en mí una profunda fascinación por el comportamiento humano.",
+        videoUrlESP: "https://youtu.be/HI_gzeUWiz0",
+        videoCodeESP: "HI_gzeUWiz0",
+        date: "02 JUN 2020",
+        secs: 67,
+        post: "https://www.instagram.com/p/CBBGsVqKjXu/"
+    },
+    {
+        id: 200604,
+        tldr: "How do we relate to technology and through it, to others?",
+        tldrESP: "¿Cómo nos relacionamos con la tecnología y, a través de ella, con los demás?",
+        videoTranscript: "2013.\n\nWe closed the studio, although the way I look at my work, it didn't change.\n\nLittle by little I was leaving behind the commercial work and I was investing more and more time to develop an artistic practice.\n\nMy attention was focused on observing and identifying those small gestures that we were acquiring and automating almost without realizing it, and what until now had been an innocent game, is getting loaded with intention in search of a more critical eye.\n\nDuring all these years, the main question to explore was always the same: how we relate to technology and through it, to others.",
+        videoUrl: "https://youtu.be/HDw3ZGR1gFw",
+        videoCode: "HDw3ZGR1gFw",
+        videoTranscriptESP: "2013.\n\nCerramos el estudio aunque la forma de ver mi trabajo no cambia.\n\nPoco a poco voy dejando atrás el trabajo comercial y me vuelco en la práctica artística.\n\nMi atención se centra en observar e identificar aquellos pequeños gestos que estamos adquiriendo y automatizando sin apenas darnos cuenta, y lo que hasta ahora había sido un juego inocente, se va cargando de intención en busca de una mirada más crítica.\n\nDurante todos estos años, la cuestión principal a explorar fue siempre la misma: cómo nos relacionamos con la tecnología y a través de ella, con los demás.",
+        videoUrlESP: "https://youtu.be/cI-0hRDjgxM",
+        videoCodeESP: "cI-0hRDjgxM",
+        date: "04 JUN 2020",
+        secs: 58,
+        post: "https://www.instagram.com/p/CBBHwWoKeBM/"
+    },
+    {
+        id: 200606,
+        tldr: "Technological devices and digital tools have a huge influence power on the development and consolidation of our behavior.",
+        tldrESP: "Los dispositivos tecnológicos y las herramientas digitales tienen un gran poder de influencia en el desarrollo y consolidación de nuestro comportamiento.",
+        videoTranscript: "2018.\n\nThis is me, wearing a virtual reality headset, being part of an exhibition that reflected on the role of design in our lives.\n\nThere was a controller on the floor, with a message inviting people to take it. \n\nWhen they did it, they didn't move only their controller, they moved also the controller I was holding in my hand.\n\nThis connection between the two devices gave the visitor the feeling of being able to control my movements, as if I were a human puppet.\n\nMy proposal was about the design of technological devices and digital tools, and their capability to influence our behavior, create new gestures or modify how we relate with our environment.\n\nThis project catalyzes a significant change in my way of seeing and understanding the world.",
+        videoUrl: "https://youtu.be/iI8NY6_zNRU",
+        videoCode: "iI8NY6_zNRU",
+        videoTranscriptESP: "2018.\n\nEste soy yo, conectado a unas gafas de realidad virtual, formando parte de una exposición que reflexionaba sobre el papel del diseño en nuestras vidas.\n\nHabía un mando en el suelo, al que se invitaba a la gente a coger.\n\nCuando lo hacían, no solo movían su mando, movían también el que yo tenía en mi mano.\n\nEsa conexión entre ambos dispositivos ofrecía al visitante la sensación de poder controlar mis movimientos, como si fuera una marioneta humana.\n\nMi propuesta trataba sobre el diseño de los dispositivos tecnológicos y las herramientas digitales, y su capacidad para influir en nuestro comportamiento, crear nuevos gestos o modificar nuestra manera de relacionarnos con aquello que nos rodea.\n\nEste proyecto cataliza un cambio significativo en mi forma de ver y entender el mundo.",
+        videoUrlESP: "https://youtu.be/yFYPEr4fGtQ",
+        videoCodeESP: "yFYPEr4fGtQ",
+        date: "06 JUN 2020",
+        secs: 64,
+        post: "https://www.instagram.com/p/CBG0jq4K4G-/"
+    },
+    {
+        id: 200608,
+        tldr: "The design process involves setting the limits for a new reality.",
+        tldrESP: "El proceso de diseño implica establecer los límites para una nueva realidad.",
+        videoTranscript: "During the exhibition, my task was very simple: follow the controller that people could take with the one I was holding, in the virtual environment in which I was, as precisely as possible.\n\nThe audience didn't see what I was seeing, they could only move within a predetermined space and during a specific time frame.\n\nTheir perception and movements were limited by the decisions that shape the design of the experience.",
+        videoUrl: "https://youtu.be/Woa9N_P_3cE",
+        videoCode: "Woa9N_P_3cE",
+        videoTranscriptESP: "Durante la exposición, mi tarea era muy simple: seguir al mando que podía coger la gente con el que yo estaba sujetando, en el entorno virtual en el que me encontraba, de la forma más precisa posible.\n\nEl público no veía lo que yo estaba viendo, solo podían moverse dentro de un espacio marcado, durante unas horas concretas.\n\nSu percepción y sus movimientos estaban limitados por las decisiones que conforman el diseño de la experiencia.",
+        videoUrlESP: "https://youtu.be/ouf63RxaCWQ",
+        videoCodeESP: "ouf63RxaCWQ",
+        date: "08 JUN 2020",
+        secs: 63,
+        post: "https://www.instagram.com/p/CBLu1Qsq1Fn/"
+    },
+    {
+        id: 200610,
+        tldr: "Digital devices can be used to capture our behavior.",
+        tldrESP: "Los dispositivos digitales pueden ser usados para capturar nuestro comportamiento.",
+        videoTranscript: "In this graph you can see the activity recorded during the performance.\n\nThe horizontal axis represents the days. The vertical axis, the hours. Each line represents an interaction and an interaction started to count when someone grabbed the controller from the floor and stopped the moment they put it down again.\n\nThe schedule was distributed in 4 blocks, totaling approximately 7 and a half hours a day, except on the first day, for example, with the press event in the morning and the opening to the public in the afternoon, these three days when I was experimenting with different time slots, the day a cable breaks or the day I'm the one who breaks down.\n\n4840 interactions counted, at an average of 1 minute per interaction, spread over 40 days, during the two months of the exhibition.\n\nFrom the beginning I knew what I was exposing myself to, but the consequences it had on me were impossible to anticipate.",
+        videoUrl: "https://youtu.be/tOJ0cbEShEE",
+        videoCode: "tOJ0cbEShEE",
+        videoTranscriptESP: "En este gráfico se puede ver la actividad registrada durante la performance.\n\nEl eje horizontal representa los días. El eje vertical, las horas. Cada rayita representa una interacción y una interacción empezaba a contar cuando alguien cogía el mando del suelo y paraba en el momento en que lo volvía a dejar.\n\nEl horario estaba distribuido en 4 bloques, sumando aproximadamente unas 7 horas y media al día, excepto el primer día, por ejemplo, con la rueda de prensa por la mañana y la apertura al público por la tarde, estos tres días en los que estuve experimentando con otros horarios, el día que se estropea un cable o el día en que me rompo yo.\n\n4840 interacciones contabilizadas, a una media de 1 minuto por interacción, repartidas en 40 días, durante los dos meses que duró la exposición.\n\nDesde el primer momento sabía a lo que me estaba exponiendo, pero las consecuencias que tuvo en mí era algo imposible de prever.",
+        videoUrlESP: "https://youtu.be/Ri1y6VXeinc",
+        videoCodeESP: "Ri1y6VXeinc",
+        date: "10 JUN 2020",
+        secs: 63,
+        post: "https://www.instagram.com/p/CBRUAjWqTl6/"
+    }
+];

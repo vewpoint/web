@@ -1,18 +1,18 @@
-/* issue with ios?
-https://github.com/bvaughn/react-window/issues/290 */
-
 html,
 body {
     margin: 0;
     width: 100%;
     /* limit media query */
     min-width: 320px;
-    /* use 100vh instead of 100% to avoid problems when rotating mobile device */
     height: 100vh;
 }
 
+html {
+    font-size: 1em;
+}
+
 body {
-    background-color: black;
+    background-color: #e2e2e2;
     font-family: 'Barlow', sans-serif;
     line-height: 1.4rem;
     color: gray;
@@ -24,11 +24,39 @@ body {
 #presentation {
     overflow-y: scroll;
     height: 100vh;
-    scroll-snap-type: mandatory;
-    scroll-snap-points-y: repeat(100%);
+    scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y mandatory;
-    /* https://www.grapecity.com/blogs/css-scroll-snap-points-javascript */
-    -webkit-overflow-scrolling: touch;
+
+    /* https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+
+    /* https://www.w3schools.com/cssref/pr_scroll-behavior.asp */
+    /* smooth scroll for links to another position of the same page */
+    scroll-behavior: smooth;
+}
+
+#presentation:focus {
+    outline: none;
+}
+
+a:focus {
+    outline: none;
+    /* background-color: blue;
+    padding: 0.1rem 0 0.15rem;
+    color: #e2e2e2; */
+}
+
+#presentation::-webkit-scrollbar {
+    /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+#nopresentation {
+    height: 100%;
 }
 
 .slide {
@@ -38,42 +66,75 @@ body {
     position: relative;
 
     scroll-snap-align: start;
-    overflow: visible;
+
+    overflow: hidden;
 }
 
-.grayBackground {
-    background-color: #efefef;
+.capsule {
+    /* height: 50%; */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: black;
+}
+
+.snap {
+    scroll-snap-align: start;
+}
+
+.snapBottom {
+    scroll-snap-align: end;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.yellowSlide {
+    background-color: #ffdb00;
     color: black;
 }
 
-.flex {
+/* .flex {
     display: flex;
-}
+} */
 
 .half {
-    height: 100vh;
+    /* width: 50%; */
+    /* height: 100%; */
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: center;
     /* justify-content: center; */
     position: relative;
 }
 
-.text {
-    margin: auto 15%;
+.full {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+.outline {
+    margin: 5%;
+    color: gray;
     width: 100%;
 }
 
-.gray {
+.text {
+    margin: auto 15%;
     color: gray;
-}
-
-.yellow {
-    color: #ffdb00;
-}
-
-.black {
-    color: black;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.4rem;
 }
 
 .floatingtext {
@@ -82,7 +143,9 @@ body {
     color: gray;
     display: flex;
     width: 100%;
-
+    font-size: 1rem;
+    line-height: 1.4rem;
+    z-index: 1;
     justify-content: center;
 }
 
@@ -95,6 +158,20 @@ body {
     text-align: center;
 }
 
+.comment {
+    margin: 1.7rem;
+    padding: 1.3rem 1.7rem;
+    background-color: #efefef;
+    color: black;
+}
+
+.error {
+    margin: 1.7rem;
+    padding: 1.3rem 1.7rem;
+    background-color: black;
+    color: #ffdb00;
+}
+
 a {
     color: blue;
 }
@@ -104,38 +181,30 @@ a:visited,
 a:hover,
 a:active {
     text-decoration: none;
-    border-bottom: 0.1rem solid blue;
+    /* border-bottom: 0.1rem solid blue; */
 }
 
 a:hover {
-    background-color: blue;
-    color: #efefef;
-}
-
-
-.gray a {
-    color: #efefef;
-}
-
-.gray a:link,
-.gray a:visited,
-.gray a:hover,
-.gray a:active {
-    text-decoration: none;
-    border-bottom: 0.1rem solid #efefef;
-    background-color: transparent;
-}
-
-.gray a:hover {
-    background-color: #efefef;
+    /* background-color: blue;
+    padding: 0.1rem 0 0.15rem;
+    color: #efefef; */
     color: black;
+    background-color: transparent;
 }
 
 .photo {
     object-fit: cover;
     object-position: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+}
+
+#brokenphone {
+    width: calc(100% - 40%);
+}
+
+#familyguy {
+    object-position: 30% 70%;
 }
 
 .instructions {
@@ -146,21 +215,46 @@ a:hover {
     justify-content: center;
 }
 
+.absolute {
+    position: absolute;
+}
+
 .footer {
     position: absolute;
     bottom: 0px;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footerTop {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .footnote {
     text-align: center;
-    margin: 1.5rem 1.5rem;
+    margin: 1.5rem 15%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.footnoteLeft {
+    margin: 1.5rem 15%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.label {
+    padding: 0.5rem 0.8rem;
+    color: gray;
+    background-color: black;
 }
 
 .linkLabel {
@@ -169,21 +263,27 @@ a:hover {
     background-color: black;
 }
 
+.footnoteFamilyGuy {
+    text-align: left;
+}
+
 .linkLabel:link,
 .linkLabel:visited,
 .linkLabel:active {
     text-decoration: none;
-    border: none;
 }
 
 .linkLabel:hover {
     color: black;
     background-color: #efefef;
-    border: none;
 }
 
 .linkLabel:hover span {
     color: black;
+}
+
+.commentFooter {
+    margin-top: 0.5rem;
 }
 
 .small {
@@ -191,77 +291,180 @@ a:hover {
     line-height: 1rem;
 }
 
+.yellow {
+    color: #ffdb00;
+}
+
+.highlight {
+    /* background-color: #ffdb00; */
+    background-color: rgba(255, 219, 0, 0.6);
+    padding: 0.1rem 0 0.15rem;
+    color: black;
+}
+
+.author {
+    text-align: right;
+}
+
 .frame {
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    z-index: -1;
+}
+
+.bn {
     opacity: 0.7;
     filter: grayscale(100%);
 }
 
-.highlight {
-    background-color: #ffdb00;
-    padding: 0.1rem 0.3rem 0.15rem;
+.spacer {
+    height: 0.5rem;
+    width: 100%;
 }
+
+#smiley {
+    font-family: serif;
+    font-size: 1.5rem;
+}
+
 
 /* media query breaking points via https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488 */
 
-@media (min-width: 1281px) {
-    html {
-        font-size: 1em;
+@media (min-width: 481px) and (max-width: 767px) {
+    .text {
+        font-size: 0.7rem;
+        line-height: 1rem;
     }
 
-    .half {
-        width: 50%;
+    .title {
+        font-size: 1rem;
+        line-height: 1.4rem;
     }
+
+    .small {
+        font-size: 0.5rem;
+        line-height: 0.8rem;
+    }
+
+    #smiley {
+        font-family: serif;
+        font-size: 0.9rem;
+    }
+
 }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
-    html {
-        font-size: 1em;
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .text {
+        font-size: 0.5rem;
+        line-height: 0.8rem;
     }
 
-    .half {
-        width: 60%;
+    .title {
+        font-size: 0.7rem;
+        line-height: 1rem;
     }
+
+    .small {
+        font-size: 0.5rem;
+        line-height: 0.8rem;
+    }
+
+    #smiley {
+        font-family: serif;
+        font-size: 0.7rem;
+    }
+
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    html {
-        font-size: 1em;
-    }
-
-    .half {
-        width: 80%;
-    }
-}
-
-@media (min-width: 0px) and (max-width: 767px) {
-    html {
-        font-size: 0.8em;
-    }
+@media screen and (orientation: portrait) {
 
     .half {
         width: 100%;
+        height: 50%;
+        flex-wrap: nowrap;
+    }
+
+    .flex {
+        /* display: contents; */
+    }
+
+    .capsule {
+        height: 100%;
     }
 }
 
-.gray ::-moz-selection {
-    color: #efefef;
+@media screen and (orientation: landscape) {
+
+    .half {
+        width: 50%;
+        height: 100%;
+        flex-wrap: wrap;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .capsule {
+        height: 50%;
+    }
+}
+
+::-moz-selection {
+    color: #e2e2e2;
     background-color: gray;
 }
 
-.gray ::selection {
-    color: #efefef;
+::selection {
+    color: #e2e2e2;
     background-color: gray;
 }
 
-.black ::-moz-selection {
-    color: black;
-    background-color: #ffdb00;
+.linkOutline {
+    color: gray;
 }
 
-.black ::selection {
+.linkOutline:link,
+.linkOutline:visited,
+.linkOutline:active {
+    text-decoration: none;
+}
+
+.linkOutline:hover {
+    color: #ffdb00;
+}
+
+.header {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.menu {
+    text-align: center;
+    margin: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.linkMenu {
+    padding: 0.5rem 0.8rem;
+    color: #ffdb00;
+    background-color: black;
+}
+
+.linkMenu:link,
+.linkMenu:visited,
+.linkMenu:active {
+    text-decoration: none;
+}
+
+.linkMenu:hover {
     color: black;
     background-color: #ffdb00;
 }
