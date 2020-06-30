@@ -72,6 +72,7 @@ a:focus {
     justify-content: center;
     position: relative;
     background-color: black;
+    overflow: hidden;
 }
 
 .snap {
