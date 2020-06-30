@@ -383,6 +383,7 @@ a:hover {
 
     .flex {
         /* display: contents; */
+        display: block;
     }
 
     .capsule {
