@@ -197,6 +197,7 @@ a:hover {
 }
 
 iframe.photo {
+    /* fixes iframe position iphone portrait */
     object-fit: initial;
 }
 
@@ -311,6 +312,8 @@ iframe.photo {
     height: 100%;
     width: 100%;
     display: block;
+    /* force sharp edges when blur for lqip  */
+    overflow: hidden;
 }
 
 .bn {
@@ -470,4 +473,20 @@ iframe.photo {
 .linkMenu:hover {
     color: black;
     background-color: #ffdb00;
+}
+
+/* LQIP (Low Quality Image Placeholder)/blurry image placeholder/Blur up image technique */
+/* https://github.com/aFarkas/lazysizes */
+
+.blur-up {
+    /* -webkit-filter: blur(10px);
+    filter: blur(10px); */
+    transition: filter 400ms, -webkit-filter 400ms;
+    image-rendering: pixelated;
+}
+
+.blur-up.lazyloaded {
+    /* -webkit-filter: blur(0);
+    filter: blur(0); */
+    image-rendering: auto;
 }

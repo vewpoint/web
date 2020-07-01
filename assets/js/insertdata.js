@@ -38,7 +38,7 @@ for (i = 0; i < data.length; i++) {
     } else {
         vCode = data[i].videoCode;
     }
-    frame.innerHTML = '<iframe class="photo" src="https://www.youtube.com/embed/' + vCode + '" frameborder="0"  allowfullscreen></iframe>';
+    frame.innerHTML = '<iframe class="photo lazyload" data-src="https://www.youtube.com/embed/' + vCode + '" frameborder="0"  allowfullscreen></iframe>';
 
     secsTotal = secsTotal + data[i].secs;
 
