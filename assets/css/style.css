@@ -481,7 +481,7 @@ iframe.photo {
 .blur-up {
     /* -webkit-filter: blur(10px);
     filter: blur(10px); */
-    transition: filter 400ms, -webkit-filter 400ms;
+    /* transition: filter 400ms, -webkit-filter 400ms; */
     image-rendering: pixelated;
 }
 
